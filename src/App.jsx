@@ -37,7 +37,7 @@ export default function App() {
             <div className="">
                 <ul className="list-group list-group-flush">
                     {data?.map((item, index) =>
-                        <li className="list-group-item" key={index}>
+                        <li className="list-group-item" key={index} style={{userSelect: 'none'}}>
                             <span>{item}</span>
                             <button onClick={() => DispatchEdit(item, index)} className="btn btn-outline-primary me-2 mx-2 py-0">&#9999;</button>
                             <button onClick={() => { dispath({ type: 'DELETE', payload: index }) }} className="btn btn-outline-danger py-0">&#128465;</button>
